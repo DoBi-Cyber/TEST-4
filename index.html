@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="google" content="notranslate">
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="/public/css/intlTelInput.css">
+	<link rel="stylesheet" href="/public/css/weui.css">
+	<link href="/public/css/swiper.css" rel="stylesheet" type="text/css" />
+	<link href="/public/css/all.css?1739672475"  rel="stylesheet"  type="text/css">
+	<script type="text/javascript" src="/public/js/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="/public/js/swiper.min.js"></script>
+	<script type="text/javascript" src="/public/js/base.js"></script>
+    <script src="/public/layui/layui-en.js"></script>
+	<title>Login</title>
+	<script src="/public/js/weui.min.js"></script>
+        <style>
+            body {
+                padding: 0;
+            }
+            #lang {
+                display: inline-block;
+                padding: 0;
+                height: 32px;
+                padding-left: 35px;
+                float: right;
+                font-size:.23rem;
+                min-width:1.1rem;
+                line-height: 32px;
+                top: 0.15rem;
+                right:.1rem;
+                position: relative;
+                
+            }
+        </style>
+</head>
+
+<body >
+      	<div id="lang" style="background:url('/public/images/en.png') no-repeat left ;">English</div> 
+  	  	<div class="login_body">
+	<div class="login_logo">
+		<img src="/public/images/logo.png?3" alt="">
+		
+	</div>
+    <form class="layui-form" id="formlogin" name="formlogin" method="post" role="form"  >
+	<div class="login_con">
+		<ul class="login_form">
+			<li class="login_form_con">
+				<input type="text" name="userphone"  value="" maxlength="15" placeholder="Phone number" autocomplete="off" class="name userphone" id="userphone"  lay-verify="number|username">
+				<input type="hidden" id="country-code" name="country_code">
+			</li>
+			<li>
+				<img src="/public/images/password.png" alt="">
+				<div class="login_form_con">
+					<input type="password" name="password" id="password" placeholder="Password" autocomplete="off" class="password">
+					
+				</div>
+			</li>
+		</ul>
+		<div class="login_con_link">
+			<p><a href="javascript:;" id="repassword">Forgot password</a></p>
+			<a href="/login/register.html">Register</a>
+		</div>
+		<input type="hidden" id="url" name="url" value="/home" >
+		<input id="login_btn" type="button" value="Login" class="logininput" lay-filter="login" lay-submit="">
+	</div>
+    </form>
+    </div>
+    <script src="/public/js/intlTelInputWithUtils.js"></script>
+    <script type="text/javascript">
+    var selectedLanguage="en"
+</script>
+    <script type="module" src="/public/js/login.js?1739672475"></script>
+</body>
+
+</html>
